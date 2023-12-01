@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/registration.css">
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="registration-form" action="{{ url_for('register') }}" method="post">
+            <h2>Register</h2>
+            {{ form.hidden_tag() }}
+
+            <label for="{{ form.username.id }}">Username:</label>
+            {{ form.username() }}
+
+            <label for="{{ form.password.id }}">Password:</label>
+            {{ form.password() }}
+
+            <label for="{{ form.gender.id }}">Gender:</label>
+            {{ form.gender() }}
+
+            <label for="{{ form.country.id }}">Country:</label>
+            {{ form.country() }}
+
+            <label for="{{ form.birthday.id }}">Date of Birth:</label>
+            {{ form.birthday() }}
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>

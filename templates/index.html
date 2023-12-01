@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Market of Game Accounts</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="header-buttons">
+            <button class="header-register">REGISTER</button>
+            <button class="header-login">LOGIN</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_game_info">
+            <img src="/static/gaming-gta5-wallpaper1 1.png" alt="gta5">
+            <p class="main_gtav">GTA</p>
+            <p class="main_v">V</p>
+            <p class="main_pr">PR.</p>
+            <p class="main_ed">ED</p>
+            <div class="desc">
+                <p class="main_desc">
+                    The game is the online component of Grand Theft
+                    Auto V. Set within the fictional state
+                    of San Andreas (based on Southern
+                    California), Grand Theft Auto Online allows up to
+                    30 players to explore its open world environment
+                    and engage in cooperative or competitive game matches.</p>
+            </div>
+            <div class="main_buttons">
+                <button class="buy">BUY</button>
+                <button class="rate">⭐⭐⭐⭐⭐</button>
+            </div>
+        </div>
+
+        <div class="commentars">
+            <form class="testing" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.comment.label }} {{ form.comment(class="comment-input") }}
+                {{ form.name.label }} {{ form.name(class="comment-input") }}
+
+                {{ form.submit(class="post-comment") }}
+                {% for comment in comments %}
+                <p>Name:{{ comment.name }}: Comment: {{ comment.comment }}</p>
+                {% endfor %}
+            </form>
+        </div>
+    </main>
+
+
+
+
+</body>
+
+</html>
